@@ -69,8 +69,41 @@
       <h2 class="visually-hidden">Слайдер с новинками</h2>
 
       <div class="hero__slider slider">
+        <div class="slider__controls controls">
+          <ul class="controls__buttons">
+            <li class="controls__item">
+              <button class="controls__button controls__button--previous" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+              </button>
+            </li>
+            <li class="controls__item">
+              <button class="controls__button controls__button--next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+              </button>
+            </li>
+          </ul>
+
+          <ul class="controls__pagination slider-pagination">
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="visually-hidden">1</span>
+              </button>
+            </li>
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="visually-hidden">2</span>
+              </button>
+            </li>
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="visually-hidden">3</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
         <ul class="hero__list slider__list">
-          <li class="hero__item slide slide--one">
+          <li class="hero__item slider__item slider__item--top slide slide--one">
             <h3 class="slide__title">Декаф Флэт Уайт</h3>
             <p class="slide__badge">Новинка!</p>
             <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -88,7 +121,7 @@
               <button class="slide__button" type="button">Заказать</button>
             </div>
           </li>
-          <li class="hero__item slide slide--two">
+          <li class="hero__item slider__item slide slide--two">
             <h3 class="slide__title">Лавандовый Латте</h3>
             <p class="slide__badge">Новинка!</p>
             <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -106,7 +139,7 @@
               <button class="slide__button" type="button">Заказать</button>
             </div>
           </li>
-          <li class="hero__item slide slide--three">
+          <li class="hero__item slider__item slide slide--three">
             <h3 class="slide__title">Тройной Эспрессо</h3>
             <p class="slide__badge">Новинка!</p>
             <p class="slide__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -125,39 +158,6 @@
             </div>
           </li>
         </ul>
-
-        <div class="slider__controls controls">
-          <ul class="controls__buttons">
-            <li class="controls__item">
-              <button class="controls__button" type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-            </li>
-            <li class="controls__item">
-              <button class="controls__button" type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
-            </li>
-          </ul>
-
-          <ul class="controls__pagination pagination">
-            <li class="pagination__item">
-              <button class="pagination__button" type="button">
-                <span class="visually-hidden">1</span>
-              </button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__button" type="button">
-                <span class="visually-hidden">2</span>
-              </button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__button" type="button">
-                <span class="visually-hidden">3</span>
-              </button>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
 

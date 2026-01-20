@@ -1,0 +1,25 @@
+.slider {
+  position: relative;
+}
+
+.slider__list {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.slider__item {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  &--top {
+    order: 1;
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  inset: 0;
+}
