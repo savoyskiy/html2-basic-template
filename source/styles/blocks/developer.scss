@@ -2,6 +2,14 @@
   display: flex;
   justify-content: center;
   padding: 20px 20px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 40px;
+  }
 }
 
 .developer__text,
@@ -29,5 +37,30 @@
     height: 16px;
     background-color: $base-gray;
     mask-image: url("../../images/HTMLAcademy-logo.svg");
+  }
+
+  &:hover {
+    color: $base-primary;
+
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+
+  &:focus-visible {
+    color: $base-primary;
+    outline: 2px solid $base-primary;
+
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+
+  &:active {
+    color: $primary-darker;
+
+    &::after {
+      background-color: $primary-darker;
+    }
   }
 }

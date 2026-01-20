@@ -1,5 +1,13 @@
 .shop {
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0 0;
+  }
 }
 
 .shop__list {
@@ -30,4 +38,18 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $base-black;
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus-visible {
+    color: $base-primary;
+    outline: 2px solid $base-primary;
+  }
+
+  &:active {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
 }

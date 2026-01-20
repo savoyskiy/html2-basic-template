@@ -30,4 +30,30 @@
   &--ok::before {
     mask-image: url("../../icons/ok-icon.svg");
   }
+
+  &:hover {
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

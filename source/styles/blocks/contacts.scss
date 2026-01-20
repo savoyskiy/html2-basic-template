@@ -1,5 +1,13 @@
 .contacts {
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 0 0;
+  }
 }
 
 .contacts__title {
@@ -33,13 +41,39 @@
     width: 13px;
     height: 16px;
     background-color: $base-primary;
-  }
-
-  &--address::before {
-    mask-image: url("../../icons/address-icon.svg");
-  }
-
-  &--phone::before {
     mask-image: url("../../icons/phone-icon.svg");
+  }
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus-visible {
+    color: $base-primary;
+    outline: 2px solid $base-primary;
+  }
+
+  &:active {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+}
+
+.contacts__text {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $base-black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -19px;
+    width: 13px;
+    height: 16px;
+    background-color: $base-primary;
+    mask-image: url("../../icons/address-icon.svg");
   }
 }
