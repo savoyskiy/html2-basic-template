@@ -60,8 +60,21 @@
     </button>
   </header>
 
-  <main class="main container">
+  <main class="main">
     <h1></h1>
+
+    <section class="main__map map">
+      <h2 class="map__title visually-hidden">Карта местонахождения магазина.</h2>
+
+      <picture>
+        <source media="(min-width: 1440px)" type="image/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
+        <source media="(min-width: 768px)" type="image/webp" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
+        <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="420">
+        <source media="(min-width: 1440px)" type="image/png" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="540">
+        <source media="(min-width: 768px)" type="image/png" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="480">
+        <img class="map__image" src="./images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" alt="Карта местонахождения магазина." loading="lazy" width="320" height="420">
+      </picture>
+    </section>
   </main>
 
   <footer class="footer container">
