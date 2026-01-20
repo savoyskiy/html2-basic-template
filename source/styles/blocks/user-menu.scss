@@ -27,11 +27,11 @@
   }
 
   &--login::before {
-    mask-image: url("../../images/user-icon.svg");
+    mask-image: url("../../icons/user-icon.svg");
   }
 
   &--basket::before {
-    mask-image: url("../../images/basket-icon.svg");
+    mask-image: url("../../icons/basket-icon.svg");
   }
 
   @media (min-width: $tablet-width) {

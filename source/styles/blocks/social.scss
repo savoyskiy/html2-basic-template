@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  column-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__link {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $base-gray;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/vk-icon.svg");
+  }
+
+  &--pinterest::before {
+    mask-image: url("../../icons/pinterest-icon.svg");
+  }
+
+  &--ok::before {
+    mask-image: url("../../icons/ok-icon.svg");
+  }
+}

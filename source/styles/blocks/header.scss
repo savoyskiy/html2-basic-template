@@ -1,7 +1,6 @@
 .header {
   display: flex;
   padding: 0;
-  min-width: 320px;
   background-color: $base-white;
   color: $base-black;
 
@@ -10,7 +9,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1360px;
     padding: 0 40px;
   }
 }

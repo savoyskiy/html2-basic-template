@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logotypes {
+  display: flex;
+  padding: 20px;
+}
+
+.footer__logo-wrapper {
+  margin: 0 auto 0 0;
+  padding: 2px 0;
+}
+
+.footer__logo-image {
+  display: block;
+}
+
+.footer__logo-text {
+  display: none;
+}
