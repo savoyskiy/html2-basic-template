@@ -32,13 +32,16 @@
   }
 
   &:hover {
+    background-color: $base-secondary;
+
     &::before {
       background-color: $base-primary;
     }
   }
 
   &:focus-visible {
-    outline: 2px solid $base-primary;
+    background-color: $base-secondary;
+    outline: none;
 
     &::before {
       background-color: $base-primary;
@@ -46,14 +49,10 @@
   }
 
   &:active {
+    background-color: $primary-opacity;
+
     &::before {
       background-color: $base-primary;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &:active {
-      opacity: 0.3;
     }
   }
 }
