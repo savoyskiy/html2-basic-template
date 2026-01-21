@@ -1,6 +1,32 @@
-.hero__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+.hero {
+  position: relative;
 
+  @media (min-width: $desktop-width) {
+    &:has(.slider__item--top.slide--one)::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $flat-white;
+    }
+
+    &:has(.slider__item--top.slide--two)::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $lavender-latte;
+    }
+
+    &:has(.slider__item--top.slide--three)::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $espresso;
+    }
+  }
+}

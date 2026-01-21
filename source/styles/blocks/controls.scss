@@ -58,3 +58,15 @@
     }
   }
 }
+
+.controls__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+  }
+}
