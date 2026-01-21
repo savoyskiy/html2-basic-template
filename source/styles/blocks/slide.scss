@@ -198,4 +198,18 @@
   text-align: center;
   color: $base-white;
   background-color: $base-primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-gray;
+  }
 }

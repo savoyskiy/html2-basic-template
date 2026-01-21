@@ -12,6 +12,7 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -37,6 +38,29 @@
     mask-image: url("../../icons/previous-icon.svg");
   }
 
+  &:hover {
+    background-color: transparent;
+    background-image: linear-gradient(to right, $base-white 0%, transparent);
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+    background-image: linear-gradient(to right, $base-white 0%, transparent);
+    outline: 2px solid $base-primary;
+    outline-offset: -2px;
+  }
+
+  &:active:not(:disabled) {
+    background-color: transparent;
+    background-image: linear-gradient(to right, $primary-opacity 0%, transparent);
+  }
+
+  &:disabled {
+    &::before {
+      background-color: $base-gray;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     &::before {
       left: 34px;
@@ -50,6 +74,29 @@
   &::before {
     right: 4px;
     mask-image: url("../../icons/next-icon.svg");
+  }
+
+  &:hover {
+    background-color: transparent;
+    background-image: linear-gradient(to left, $base-white 0%, transparent);
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+    background-image: linear-gradient(to left, $base-white 0%, transparent);
+    outline: 2px solid $base-primary;
+    outline-offset: -2px;
+  }
+
+  &:active:not(:disabled) {
+    background-color: transparent;
+    background-image: linear-gradient(to left, $primary-opacity 0%, transparent);
+  }
+
+  &:disabled {
+    &::before {
+      background-color: $base-gray;
+    }
   }
 
   @media (min-width: $tablet-width) {

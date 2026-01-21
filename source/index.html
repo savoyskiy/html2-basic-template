@@ -69,7 +69,35 @@
       <h2 class="visually-hidden">Слайдер с новинками</h2>
       <div class="hero__content-wrapper container">
         <div class="hero__slider slider">
-          <div class="slider__controls controls">
+          <button class="controls__button controls__button--previous" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="controls__button controls__button--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+
+          <ul class="controls__pagination slider-pagination">
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="slider-pagination__button-color slider-pagination__button-color--current"></span>
+                <span class="visually-hidden">1</span>
+              </button>
+            </li>
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="slider-pagination__button-color"></span>
+                <span class="visually-hidden">2</span>
+              </button>
+            </li>
+            <li class="slider-pagination__item">
+              <button class="slider-pagination__button" type="button">
+                <span class="slider-pagination__button-color"></span>
+                <span class="visually-hidden">3</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- <div class="slider__controls controls">
             <ul class="controls__buttons">
               <li class="controls__item">
                 <button class="controls__button controls__button--previous" type="button">
@@ -103,10 +131,10 @@
                 </button>
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <ul class="hero__list slider__list">
-            <li class="hero__item slider__item slide slide--one">
+            <li class="hero__item slider__item slider__item--top slide slide--one">
               <h3 class="slide__title">Декаф Флэт Уайт</h3>
               <p class="slide__badge">Новинка!</p>
               <p class="slide__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -124,7 +152,7 @@
                 <button class="slide__button" type="button">Заказать</button>
               </div>
             </li>
-            <li class="hero__item slider__item slider__item--top slide slide--two">
+            <li class="hero__item slider__item slide slide--two">
               <h3 class="slide__title">Лавандовый Латте</h3>
               <p class="slide__badge">Новинка!</p>
               <p class="slide__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
