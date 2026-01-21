@@ -13,32 +13,23 @@
   border: none;
   border-radius: none;
   background-color: transparent;
+  background-image: linear-gradient(transparent 10px, $base-white 10px, $base-white 14px, transparent 14px);
   cursor: pointer;
-}
-
-.slider-pagination__button-color {
-  display: block;
-  height: 4px;
-  width: 62px;
-  background-color: $base-white;
 
   &--current {
-    background-color: $base-primary;
+    background-image: linear-gradient(transparent 10px, $base-primary 10px, $base-primary 14px, transparent 14px);
   }
-}
 
-.slider-pagination__button:hover .slider-pagination__button-color {
-  background-color: $primary-opacity;
-}
+  &:hover {
+    background-image: linear-gradient(transparent 10px, $primary-opacity 10px, $primary-opacity 14px, transparent 14px);
+  }
 
-.slider-pagination__button:focus-visible {
-  outline: 2px solid $base-primary;
-}
+  &:focus-visible {
+    background-image: linear-gradient(transparent 10px, $primary-opacity 10px, $primary-opacity 14px, transparent 14px);
+    outline: 2px solid $base-primary;
+  }
 
-.slider-pagination__button:focus-visible .slider-pagination__button-color {
-  background-color: $primary-opacity;
-}
-
-.slider-pagination__button:active .slider-pagination__button-color {
-  background-color: $base-primary;
+  &:active {
+    background-image: linear-gradient(transparent 10px, $base-primary 10px, $base-primary 14px, transparent 14px);
+  }
 }
