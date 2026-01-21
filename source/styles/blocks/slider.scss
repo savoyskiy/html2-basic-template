@@ -61,12 +61,12 @@
     mask-image: url("../../icons/previous-icon.svg");
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: transparent;
     background-image: linear-gradient(to right, $base-white 0%, transparent);
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:disabled) {
     background-color: transparent;
     background-image: linear-gradient(to right, $base-white 0%, transparent);
     outline: 2px solid $base-primary;
@@ -93,12 +93,12 @@
     mask-image: url("../../icons/next-icon.svg");
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: transparent;
     background-image: linear-gradient(to left, $base-white 0%, transparent);
   }
 
-  &:focus-visible {
+  &:focus-visible:not(:disabled) {
     background-color: transparent;
     background-image: linear-gradient(to left, $base-white 0%, transparent);
     outline: 2px solid $base-primary;
