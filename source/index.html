@@ -266,7 +266,14 @@
         </form>
 
         <div class="catalog__products products">
-          <div class="products__sorting"></div>
+          <div class="products__sorting sorting">
+            <span class="sorting__text">Сортировка:</span>
+            <select class="sorting__select" name="sorting" id="sorting">
+              <option class="sorting__option" value="default">По умолчанию</option>
+              <option class="sorting__option" value="price">По цене</option>
+              <option class="sorting__option" value="country">По стране</option>
+            </select>
+          </div>
 
           <ul class="products__list">
             <li class="products__item card">
