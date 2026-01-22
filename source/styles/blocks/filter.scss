@@ -57,6 +57,7 @@
   margin: 0;
   border-radius: 50%;
   border: 2px solid $base-gray;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -67,16 +68,36 @@
     background-color: $base-primary;
   }
 
-  &:checked {
-    border-color: $base-primary;
+  &:not(:disabled):hover {
+    border-color: $primary-lighter;
+
+    &::before {
+      display: block;
+      background-color: $primary-opacity;
+    }
   }
 
-  &:checked::before {
-    display: block;
+  &:checked,
+  &:checked:not(:disabled):hover {
+    border-color: $base-primary;
+
+    &::before {
+      display: block;
+      background-color: $base-primary;
+    }
   }
 
   &:disabled {
     border-color: $light-gray;
+    cursor: auto;
+  }
+
+  &:checked:disabled {
+    &::before {
+      display: block;
+      background-color: $light-gray;
+      pointer-events: none;
+    }
   }
 }
 
@@ -90,6 +111,7 @@
   border-radius: 12px;
   border: 2px solid $base-gray;
   background-color: $base-gray;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -100,7 +122,17 @@
     background-color: $base-white;
   }
 
-  &:checked {
+  &:not(:disabled):hover {
+    border-color: $primary-lighter;
+    background-color: $primary-opacity;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &:checked,
+  &:checked:not(:disabled):hover {
     justify-content: end;
     border-color: $base-primary;
     background-color: $base-primary;
@@ -109,6 +141,13 @@
   &:disabled {
     border-color: $light-gray;
     background-color: $light-gray;
+    cursor: auto;
+  }
+
+  &:checked:disabled {
+    &::before {
+      background-color: $base-gray;
+    }
   }
 }
 
@@ -147,6 +186,7 @@
   text-align: center;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 
   &--submit {
     color: $base-white;
@@ -156,5 +196,30 @@
   &--reset {
     color: $base-primary;
     background-color: $base-white;
+  }
+
+  &:hover {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:focus-visible {
+    color: $base-white;
+    background-color: $primary-lighter;
+    outline: 2px solid $base-primary;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  &--submit:disabled {
+    background-color: $base-gray;
+  }
+
+  &--reset:disabled {
+    color: $base-white;
+    background-color: $light-gray;
   }
 }

@@ -62,9 +62,53 @@
     }
   }
 
-  &--current {
+  &:hover {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:focus-visible {
+    color: $base-white;
+    background-color: $primary-lighter;
+    outline: 2px  solid $base-primary;
+  }
+
+  &--edge:hover {
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &--edge:focus-visible {
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  &--edge:active {
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &:disabled {
+    color: $base-white;
+    background-color: $light-gray;
+  }
+
+  &--current,
+  &--current:hover,
+  &--current:focus-visible,
+  &--current:active {
     font-weight: 600;
     color: $base-black;
     background-color: transparent;
+    outline: none;
+    pointer-events: none;
   }
 }
