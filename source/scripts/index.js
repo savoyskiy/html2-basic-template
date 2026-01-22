@@ -63,13 +63,37 @@ sliderPagination.addEventListener('click', (evt) => {
 
 /* слайдер цены */
 const priceSlider = document.querySelector('.price__slider');
+const priceMin = document.querySelector('.price__input--min');
+const priceMax = document.querySelector('.price__input--max');
 
 noUiSlider.create(priceSlider, {
   start: [0, 900],
+  step: 1,
   connect: true,
   range:{
     'min': 0,
     'max': 1000
   },
-  cssPrefix: 'noui-'
+  cssPrefix: 'noui-',
+  format: {
+    to: function (value) {
+      return parseInt(value, 10);
+    },
+    from: function (value) {
+      return parseFloat(value);
+    },
+  }
+});
+
+priceSlider.noUiSlider.on('update', () => {
+  priceMin.value = priceSlider.noUiSlider.get()[0];
+  priceMax.value = priceSlider.noUiSlider.get()[1];
+});
+
+priceMin.addEventListener('change', () => {
+  priceSlider.noUiSlider.set([priceMin.value, null]);
+});
+
+priceMax.addEventListener('change', () => {
+  priceSlider.noUiSlider.set([null, priceMax.value]);
 });
