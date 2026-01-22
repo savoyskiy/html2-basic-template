@@ -90,10 +90,26 @@ priceSlider.noUiSlider.on('update', () => {
   priceMax.value = priceSlider.noUiSlider.get()[1];
 });
 
+const setSliderMinValue = (value) => {
+  priceSlider.noUiSlider.set([value, null]);
+};
+
+const setSliderMaxValue = (value) => {
+  priceSlider.noUiSlider.set([null, value]);
+};
+
 priceMin.addEventListener('change', () => {
-  priceSlider.noUiSlider.set([priceMin.value, null]);
+  setSliderMinValue(priceMin.value);
 });
 
 priceMax.addEventListener('change', () => {
-  priceSlider.noUiSlider.set([null, priceMax.value]);
+  setSliderMaxValue(priceMax.value);
+});
+
+/* сброс формы */
+const buttonReset = document.querySelector('.filter__button--reset');
+
+buttonReset.addEventListener('click', () => {
+  setSliderMinValue(0);
+  setSliderMaxValue(900);
 });
