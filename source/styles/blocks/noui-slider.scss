@@ -1,0 +1,74 @@
+.noui-target {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  background-image: linear-gradient(transparent 1px, $light-gray 1px, $light-gray 3px, transparent);
+  box-sizing: border-box;
+}
+
+.noui-target * {
+  user-select: none;
+  touch-action: none;
+  box-sizing: border-box;
+}
+
+.noui-horizontal {
+  height: 4px;
+}
+
+.noui-horizontal .noui-origin {
+  height: 0;
+}
+
+.noui-connect {
+  height: 100%;
+  width: 100%;
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transform-origin: 0 0;
+  transform-style: flat;
+  background-color: $base-primary;
+}
+
+.noui-origin {
+  width: 10%;
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: 0 0;
+  transform-style: flat;
+}
+
+.noui-horizontal .noui-handle {
+  position: relative;
+  top: -8px;
+  right: -20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid $base-primary;
+  background-color: $base-white;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+}
+
+.noui-handle {
+  background: #ffffff;
+  cursor: default;
+  backface-visibility: hidden;
+}
+
+.noui-touch-area {
+  height: 100%;
+  width: 100%;
+}

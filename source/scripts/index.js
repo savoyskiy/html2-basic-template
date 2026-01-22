@@ -60,3 +60,16 @@ sliderPagination.addEventListener('click', (evt) => {
     changeSliderControls();
   }
 });
+
+/* слайдер цены */
+const priceSlider = document.querySelector('.price__slider');
+
+noUiSlider.create(priceSlider, {
+  start: [0, 900],
+  connect: true,
+  range:{
+    'min': 0,
+    'max': 1000
+  },
+  cssPrefix: 'noui-'
+});

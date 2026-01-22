@@ -35,3 +35,14 @@
     width: 110px;
   }
 }
+
+.price__slider-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(transparent 1px, $light-gray 1px, $light-gray 3px, transparent);
+}
+
+.price__slider {
+  width: 300px;
+  align-self: center;
+}
