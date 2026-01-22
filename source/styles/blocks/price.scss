@@ -23,9 +23,19 @@
   font-weight: 500;
   font-family: inherit;
   text-align: center;
-  border: 2px solid $base-primary;
+  border: 2px solid $primary-lighter;
   border-radius: 4px;
   background-color: transparent;
+
+  &:focus-visible {
+    border-color: $primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $light-gray;
+    color: $base-gray;
+  }
 
   @media (min-width: $tablet-width) {
     width: 67px;
