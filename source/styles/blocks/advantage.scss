@@ -63,6 +63,18 @@
   }
 }
 
+.advantage.advantage--comfort::before {
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+}
+
+.advantage.advantage--energy::before {
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+}
+
 .advantage__title {
   grid-row: 1 / 2;
   margin: 0;

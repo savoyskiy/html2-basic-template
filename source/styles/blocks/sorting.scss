@@ -3,28 +3,34 @@
   justify-content: space-between;
   align-items: start;
   column-gap: 10px;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 
   @media (min-width: $tablet-width) {
     justify-content: end;
+    margin: 0 0 25px;
   }
 }
 
 .sorting__text {
-  padding: 4px 0;
+  padding: 4px 0 4px 1px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 4px;
+  }
 }
 
 .sorting__select {
   position: relative;
   appearance: none;
-  max-width: 155px;
+  max-width: 180px;
   padding: 4px 30px 4px 10px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+  font-family: inherit;
   text-transform: lowercase;
   color: $base-primary;
   border: none;
@@ -33,7 +39,7 @@
   background-image: url("../../icons/stack.svg#select-icon");
   background-repeat: no-repeat;
   background-size: 10px;
-  background-position: 135px -1px;
+  background-position: 145px -1px;
   cursor: pointer;
 
   &:hover {
@@ -54,6 +60,11 @@
   &:active {
     background-color: transparent;
     background-image: url("../../icons/stack.svg#select-active-icon");
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 30px 4px 10px;
+    background-position: 145px -3px;
   }
 }
 

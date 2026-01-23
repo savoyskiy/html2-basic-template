@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   row-gap: 30px;
   margin: 0;
-  padding: 0 0 44px;
+  padding: 0 0 40px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: min-content 1fr 1fr;

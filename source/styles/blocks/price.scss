@@ -21,12 +21,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 318px;
+    width: 317px;
   }
 }
 
+.price__legend {
+  margin: 0 0 30px;
+}
+
 .price__input {
-  width: 94px;
+  width: 97px;
   padding: 6px 8px;
   font-size: 16px;
   line-height: 24px;
@@ -52,7 +56,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 110px;
+    width: 113px;
   }
 }
 
