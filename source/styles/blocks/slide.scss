@@ -230,6 +230,7 @@
   &:hover,
   &:focus-visible {
     background-color: $primary-lighter;
+    outline: 2px solid $primary-darker;
   }
 
   &:active:not(:disabled) {
