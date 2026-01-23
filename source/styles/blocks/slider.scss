@@ -58,7 +58,7 @@
 
   &::before {
     left: 4px;
-    mask-image: url("../../icons/previous-icon.svg");
+    mask-image: url("../../icons/stack.svg#previous-icon");
   }
 
   &:hover:not(:disabled) {
@@ -90,7 +90,7 @@
 
   &::before {
     right: 4px;
-    mask-image: url("../../icons/next-icon.svg");
+    mask-image: url("../../icons/stack.svg#next-icon");
   }
 
   &:hover:not(:disabled) {

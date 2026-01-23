@@ -6,7 +6,7 @@
   padding: 0 0 44px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: min-content 1fr 1fr;
     grid-template-rows: 1fr min-content;
     gap: 40px 30px;
   }

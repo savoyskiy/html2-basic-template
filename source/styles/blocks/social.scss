@@ -20,15 +20,15 @@
   }
 
   &--vk::before {
-    mask-image: url("../../icons/vk-icon.svg");
+    mask-image: url("../../icons/stack.svg#vk-icon");
   }
 
   &--pinterest::before {
-    mask-image: url("../../icons/pinterest-icon.svg");
+    mask-image: url("../../icons/stack.svg#pinterest-icon");
   }
 
   &--ok::before {
-    mask-image: url("../../icons/ok-icon.svg");
+    mask-image: url("../../icons/stack.svg#ok-icon");
   }
 
   &:hover {

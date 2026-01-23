@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  width: 280px;
 
   &::before {
     content: "";
@@ -12,6 +13,14 @@
     width: 8px;
     height: 2px;
     background-color: $base-gray;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
   }
 }
 
@@ -46,13 +55,92 @@
   }
 }
 
-.price__slider-wrapper {
-  display: flex;
-  justify-content: center;
+.price__slider {
+  width: 280px;
+  margin: 0 0 14px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  height: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin: 0 0 10px;
+    padding: 0 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    margin: 0 0 12px;
+    padding: 0 12px;
+  }
+}
+
+.slider-target {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
   background-image: linear-gradient(transparent 1px, $light-gray 1px, $light-gray 3px, transparent);
 }
 
-.price__slider {
-  width: 100%;
-  box-sizing: border-box;
+.slider-connect {
+  background-color: $primary-lighter;
+}
+
+.slider-horizontal .slider-handle {
+  position: relative;
+  right: -13px;
+  top: -10px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 2px solid $base-primary;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    right: -9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -17px;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::before {
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:active {
+    border-color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
+  }
 }

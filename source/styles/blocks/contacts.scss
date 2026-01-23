@@ -43,7 +43,7 @@
     width: 13px;
     height: 16px;
     background-color: $base-primary;
-    mask-image: url("../../icons/phone-icon.svg");
+    mask-image: url("../../icons/stack.svg#phone-icon");
   }
 
   &:hover {
@@ -76,6 +76,6 @@
     width: 13px;
     height: 16px;
     background-color: $base-primary;
-    mask-image: url("../../icons/address-icon.svg");
+    mask-image: url("../../icons/stack.svg#address-icon");
   }
 }

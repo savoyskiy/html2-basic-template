@@ -1,32 +1,64 @@
 .hero {
   position: relative;
 
-  @media (min-width: $desktop-width) {
+  &:has(.slider__item--top.slide--one)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $flat-white;
+  }
+
+  &:has(.slider__item--top.slide--two)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $lavender-latte;
+  }
+
+  &:has(.slider__item--top.slide--three)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $espresso;
+  }
+
+  @media (min-width: $tablet-width) {
     &:has(.slider__item--top.slide--one)::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $flat-white;
+      background-color: transparent;
+      background-image: linear-gradient($flat-white 640px, $base-white 640px);
     }
 
     &:has(.slider__item--top.slide--two)::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $lavender-latte;
+      background-color: transparent;
+      background-image: linear-gradient($lavender-latte 640px, $base-white 640px);
     }
 
     &:has(.slider__item--top.slide--three)::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
+      background-color: transparent;
+      background-image: linear-gradient($espresso 640px, $base-white 640px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:has(.slider__item--top.slide--one)::before {
+      background-color: $flat-white;
+      background-image: none;
+    }
+
+    &:has(.slider__item--top.slide--two)::before {
+      background-color: $lavender-latte;
+      background-image: none;
+    }
+
+    &:has(.slider__item--top.slide--three)::before {
       background-color: $espresso;
+      background-image: none;
     }
   }
 }

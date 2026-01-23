@@ -66,6 +66,11 @@ const priceSlider = document.querySelector('.price__slider');
 const priceMin = document.querySelector('.price__input--min');
 const priceMax = document.querySelector('.price__input--max');
 
+noUiSlider.cssClasses.target += ' slider-target';
+noUiSlider.cssClasses.connect += ' slider-connect';
+noUiSlider.cssClasses.horizontal += ' slider-horizontal';
+noUiSlider.cssClasses.handle += ' slider-handle';
+
 noUiSlider.create(priceSlider, {
   start: [0, 900],
   step: 1,
@@ -74,7 +79,6 @@ noUiSlider.create(priceSlider, {
     'min': 0,
     'max': 1000
   },
-  cssPrefix: 'noui-',
   format: {
     to: function (value) {
       return parseInt(value, 10);
@@ -106,7 +110,7 @@ priceMax.addEventListener('change', () => {
   setSliderMaxValue(priceMax.value);
 });
 
-/* сброс формы */
+/* сброс значений слайдера цены при сбросе формы */
 const buttonReset = document.querySelector('.filter__button--reset');
 
 buttonReset.addEventListener('click', () => {
