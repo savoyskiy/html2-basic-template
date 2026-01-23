@@ -4,10 +4,9 @@ const priceMin = document.querySelector('.price__input--min');
 const priceMax = document.querySelector('.price__input--max');
 const buttonReset = document.querySelector('.filter__button--reset');
 
-noUiSlider.cssClasses.target += ' slider-target';
-noUiSlider.cssClasses.connect += ' slider-connect';
-noUiSlider.cssClasses.horizontal += ' slider-horizontal';
-noUiSlider.cssClasses.handle += ' slider-handle';
+noUiSlider.cssClasses.target += ' price__slider-target';
+noUiSlider.cssClasses.connect += ' price__slider-connect';
+noUiSlider.cssClasses.handle += ' price__slider-handle';
 
 noUiSlider.create(priceSlider, {
   start: [0, 900],
