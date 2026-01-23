@@ -13,6 +13,8 @@
   justify-self: center;
   display: block;
   margin: 0 0 24px;
+  max-width: 100%;
+  object-fit: contain;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 30px;
@@ -71,7 +73,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 20px;
     display: block;
     width: 20px;

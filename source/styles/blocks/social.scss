@@ -1,9 +1,15 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
   column-gap: 20px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
 }
 
 .social__link {

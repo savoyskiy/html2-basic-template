@@ -1,11 +1,15 @@
 .user-menu__list {
   display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  max-width: 180px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: $desktop-width) {
     column-gap: 20px;
+    max-width: 270px;
   }
 }
 

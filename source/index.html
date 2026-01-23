@@ -214,50 +214,72 @@
             </div>
           </fieldset>
 
-          <fieldset class="filter__block  filter__milk milk">
+          <fieldset class="filter__block filter__milk milk">
             <legend class="filter__legend milk__legend">Наличие молока</legend>
 
-            <label class="filter__input-label milk__label" for="any">
-              <span class="filter__input-description milk__description">Неважно</span>
-              <input class="filter__radio milk__radio milk__radio--any" id="any" name="milk" value="any" type="radio" checked>
-            </label>
-            <label class="filter__input-label milk__label" for="animal">
-              <span class="filter__input-description milk__description">Только животное</span>
-              <input class="filter__radio milk__radio milk__radio--animal" id="animal" name="milk" value="animal" type="radio">
-            </label>
-            <label class="filter__input-label milk__label" for="plant">
-              <span class="filter__input-description milk__description">Только растительное</span>
-              <input class="filter__radio milk__radio milk__radio--plant" id="plant" name="milk" value="plant" type="radio">
-            </label>
-            <label class="filter__input-label milk__label" for="without">
-              <span class="filter__input-description milk__description">Без молока</span>
-              <input class="filter__radio milk__radio milk__radio--without" id="without" name="milk" value="without" type="radio" disabled>
-            </label>
+            <ul class="filter__list milk__list">
+              <li class="filter__item milk__item">
+                <label class="filter__input-label milk__label" for="any">
+                  <span class="filter__input-description milk__description">Неважно</span>
+                  <input class="filter__radio milk__radio milk__radio--any" id="any" name="milk" value="any" type="radio" checked>
+                </label>
+              </li>
+              <li class="filter__item milk__item">
+                <label class="filter__input-label milk__label" for="animal">
+                  <span class="filter__input-description milk__description">Только животное</span>
+                  <input class="filter__radio milk__radio milk__radio--animal" id="animal" name="milk" value="animal" type="radio">
+                </label>
+              </li>
+              <li class="filter__item milk__item">
+                <label class="filter__input-label milk__label" for="plant">
+                  <span class="filter__input-description milk__description">Только растительное</span>
+                  <input class="filter__radio milk__radio milk__radio--plant" id="plant" name="milk" value="plant" type="radio">
+                </label>
+              </li>
+              <li class="filter__item milk__item">
+                <label class="filter__input-label milk__label" for="without">
+                  <span class="filter__input-description milk__description">Без молока</span>
+                  <input class="filter__radio milk__radio milk__radio--without" id="without" name="milk" value="without" type="radio" disabled>
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="filter__block  filter__country country">
             <legend class="filter__legend country__legend">Страна произрастания</legend>
 
-            <label class="filter__input-label country__label" for="brazil">
-              <span class="filter__input-description country__description">Бразилия</span>
-              <input class="filter__checkbox country__checkbox country__checkbox--brazil" id="brazil" name="country-brazil" type="checkbox" checked>
-            </label>
-            <label class="filter__input-label country__label" for="ethiopia">
-              <span class="filter__input-description country__description">Эфиопия</span>
-              <input class="filter__checkbox country__checkbox country__checkbox--ethiopia" id="ethiopia" name="country-ethiopia" type="checkbox">
-            </label>
-            <label class="filter__input-label country__label" for="colombia">
-              <span class="filter__input-description country__description">Колумбия</span>
-              <input class="filter__checkbox country__checkbox country__checkbox--colombia" id="colombia" name="country-colombia" type="checkbox">
-            </label>
-            <label class="filter__input-label country__label" for="costa-rica">
-              <span class="filter__input-description country__description">Коста-Рика</span>
-              <input class="filter__checkbox country__checkbox country__checkbox--costa-rica" id="costa-rica" name="country-costa-rica" type="checkbox">
-            </label>
-            <label class="filter__input-label country__label" for="peru">
-              <span class="filter__input-description country__description">Перу</span>
-              <input class="filter__checkbox country__checkbox country__checkbox--peru" id="peru" name="country-peru" type="checkbox" disabled>
-            </label>
+            <ul class="filter__list country__list">
+              <li class="filter__item country__item">
+                <label class="filter__input-label country__label" for="brazil">
+                  <span class="filter__input-description country__description">Бразилия</span>
+                  <input class="filter__checkbox country__checkbox country__checkbox--brazil" id="brazil" name="country-brazil" type="checkbox" checked>
+                </label>
+              </li>
+              <li class="filter__item country__item">
+                <label class="filter__input-label country__label" for="ethiopia">
+                  <span class="filter__input-description country__description">Эфиопия</span>
+                  <input class="filter__checkbox country__checkbox country__checkbox--ethiopia" id="ethiopia" name="country-ethiopia" type="checkbox">
+                </label>
+              </li>
+              <li class="filter__item country__item">
+                <label class="filter__input-label country__label" for="colombia">
+                  <span class="filter__input-description country__description">Колумбия</span>
+                  <input class="filter__checkbox country__checkbox country__checkbox--colombia" id="colombia" name="country-colombia" type="checkbox">
+                </label>
+              </li>
+              <li class="filter__item country__item">
+                <label class="filter__input-label country__label" for="costa-rica">
+                  <span class="filter__input-description country__description">Коста-Рика</span>
+                  <input class="filter__checkbox country__checkbox country__checkbox--costa-rica" id="costa-rica" name="country-costa-rica" type="checkbox">
+                </label>
+              </li>
+              <li class="filter__item country__item">
+                <label class="filter__input-label country__label" for="peru">
+                  <span class="filter__input-description country__description">Перу</span>
+                  <input class="filter__checkbox country__checkbox country__checkbox--peru" id="peru" name="country-peru" type="checkbox" disabled>
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
           <div class="filter__button-wrapper">
@@ -492,8 +514,9 @@
     </div>
 
     <div class="footer__developer developer">
-      <p class="developer__text">Разработано в</p>
-      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <p class="developer__text">Разработано в
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </p>
     </div>
 
   </footer>
