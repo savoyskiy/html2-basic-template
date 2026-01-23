@@ -95,6 +95,11 @@
     background-color: $primary-lighter;
   }
 
+  &:focus-visible {
+    background-color: $primary-lighter;
+    outline: 2px solid $primary-darker;
+  }
+
   &:not(:disabled):active {
     background-color: $primary-darker;
   }
