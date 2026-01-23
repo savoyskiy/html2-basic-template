@@ -22,12 +22,14 @@
 }
 
 .card__title {
+  min-height: 32px;
   margin: 0 0 4px;
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
 
   @media (min-width: $tablet-width) {
+    min-height: 36px;
     margin: 0 0 10px;
     font-size: 24px;
     line-height: 36px;
@@ -35,13 +37,19 @@
 }
 
 .card__text {
+  min-height: 60px;
   margin: 0 0 16px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 
   @media (min-width: $tablet-width) {
+    min-height: 40px;
     margin: 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 60px;
   }
 }
 
