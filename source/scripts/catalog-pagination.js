@@ -8,18 +8,12 @@ let current = 1; /* начальное значение установлено 1
 
 const changePagination = () => {
   if (current <= 0) {
-    // previousButton.disabled = true;
-    // nextButton.disabled = false;
     previousButton.classList.add('pagination__link--hidden');
     nextButton.classList.remove('pagination__link--hidden');
   } else if (current >= linkList.length - 1) {
-    // nextButton.disabled = true;
-    // previousButton.disabled = false;
     nextButton.classList.add('pagination__link--hidden');
     previousButton.classList.remove('pagination__link--hidden');
   } else {
-    // nextButton.disabled = false;
-    // previousButton.disabled = false;
     nextButton.classList.remove('pagination__link--hidden');
     previousButton.classList.remove('pagination__link--hidden');
   }
