@@ -22,17 +22,18 @@
 
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
-    max-width: 400px;
+    max-width: 450px;
   }
 
   @media (min-width: $desktop-width) {
     column-gap: 20px;
-    max-width: 460px;
+    max-width: 520px;
   }
 }
 
 .main-menu__link {
   display: block;
+  max-width: 280px;
   padding: 20px;
   text-align: center;
   color: $base-black;
@@ -45,6 +46,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 75px;
     padding: 32px 20px 30px;
     border-bottom: 2px solid transparent;
 

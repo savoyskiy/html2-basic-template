@@ -47,6 +47,8 @@
   }
 
   &:disabled {
+    cursor: auto;
+
     &::before {
       background-color: $base-gray;
     }

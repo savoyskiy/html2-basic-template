@@ -14,12 +14,21 @@
 
 .contacts__title {
   min-height: 20px;
+  max-width: 280px;
   margin: 0 0 20px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    max-width: 222px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+  }
 }
 
 .contacts__list {
@@ -33,11 +42,21 @@
 
 .contacts__link {
   position: relative;
+  display: block;
+  max-width: 280px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   text-decoration: none;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    max-width: 203px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 298px;
+  }
 
   &::before {
     content: "";
@@ -67,11 +86,20 @@
 
 .contacts__text {
   position: relative;
+  max-width: 280px;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    max-width: 203px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 298px;
+  }
 
   &::before {
     content: "";

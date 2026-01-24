@@ -79,11 +79,15 @@
   }
 }
 
-
 .user-menu__text {
   display: none;
 
   @media (min-width: $desktop-width) {
+    max-width: 65px;
     display: block;
   }
+}
+
+.user-menu__link--login .user-menu__text {
+  max-width: 48px;
 }

@@ -36,6 +36,14 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
+
+  @media (min-width: $tablet-width) {
+    max-width: 222px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+  }
 }
 
 .filter__input-label {
@@ -212,6 +220,10 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    max-width: 149px;
+  }
 
   &--submit {
     color: $base-white;

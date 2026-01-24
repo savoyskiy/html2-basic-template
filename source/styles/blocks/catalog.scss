@@ -21,7 +21,8 @@
 
 .catalog__badge {
   order: -1;
-  margin: 0 0 4px;
+  margin: 0 auto 4px;
+  max-width: 280px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
@@ -38,6 +39,7 @@
 }
 
 .catalog__title {
+  max-width: 280px;
   margin: 0 0 20px;
   font-size: 24px;
   line-height: 36px;
@@ -45,6 +47,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    max-width: 728px;
     font-size: 42px;
     line-height: 64px;
   }
@@ -52,6 +55,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+    max-width: 1360px;
     margin: 0 0 40px;
   }
 }

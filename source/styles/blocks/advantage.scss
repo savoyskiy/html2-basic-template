@@ -78,6 +78,7 @@
 .advantage__title {
   grid-row: 1 / 2;
   min-height: 32px;
+  max-width: 280px;
   margin: 0;
   font-size: 18px;
   line-height: 32px;
@@ -86,6 +87,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 36px;
+    max-width: 267px;
     font-size: 24px;
     line-height: 36px;
     text-align: start;
@@ -93,12 +95,14 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
+    max-width: 315px;
   }
 }
 
 .advantage__text {
   grid-row: 2 / 3;
   min-height: 40px;
+  max-width: 280px;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
@@ -107,6 +111,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 48px;
+    max-width: 267px;
     font-size: 16px;
     line-height: 24px;
     text-align: start;
@@ -114,5 +119,6 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
+    max-width: 315px;
   }
 }
