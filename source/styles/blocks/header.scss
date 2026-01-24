@@ -46,11 +46,16 @@
 
 .header__logo-image {
   display: block;
-  max-width: 100%;
+  width: 32px;
   object-fit: contain;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0 20px 0 0;
+    width: 170px;
   }
 }
 

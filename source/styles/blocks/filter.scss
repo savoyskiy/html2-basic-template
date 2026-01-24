@@ -49,6 +49,11 @@
 .filter__input-label {
   display: flex;
   column-gap: 10px;
+  cursor: pointer;
+
+  &:has(input[disabled]) {
+    pointer-events: none;
+  }
 }
 
 .filter__input-description {
