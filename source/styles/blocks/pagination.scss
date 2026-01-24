@@ -110,6 +110,15 @@
     }
   }
 
+  &--hidden {
+    background-color: $lightest-gray;
+    pointer-events: none;
+  }
+
+  &--hidden .pagination__text {
+    color: $lightest-gray;
+  }
+
   &--current,
   &--current:hover,
   &--current:focus-visible,
