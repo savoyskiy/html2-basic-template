@@ -3,22 +3,32 @@ const priceSlider = document.querySelector('.price__slider');
 const priceMin = document.querySelector('.price__input--min');
 const priceMax = document.querySelector('.price__input--max');
 const buttonReset = document.querySelector('.filter__button--reset');
+const radixParameter = 10;
+const sliderParameters = {
+  minHandIndex: 0,
+  maxHandIndex: 1,
+  minHandStart: 0,
+  maxHandStart: 900,
+  minSliderValue: 0,
+  maxSliderValue: 1000,
+  sliderValueStep: 1
+};
 
 noUiSlider.cssClasses.target += ' price__slider-target';
 noUiSlider.cssClasses.connect += ' price__slider-connect';
 noUiSlider.cssClasses.handle += ' price__slider-handle';
 
 noUiSlider.create(priceSlider, {
-  start: [0, 900],
-  step: 1,
+  start: [sliderParameters.minHandStart, sliderParameters.maxHandStart],
+  step: sliderParameters.sliderValueStep,
   connect: true,
   range:{
-    'min': 0,
-    'max': 1000
+    'min': sliderParameters.minSliderValue,
+    'max': sliderParameters.maxSliderValue
   },
   format: {
     to: function (value) {
-      return parseInt(value, 10);
+      return parseInt(value, radixParameter);
     },
     from: function (value) {
       return parseFloat(value);
@@ -28,8 +38,8 @@ noUiSlider.create(priceSlider, {
 
 const setPriceInputsValues = () => {
   priceSlider.noUiSlider.on('update', () => {
-    priceMin.value = priceSlider.noUiSlider.get()[0];
-    priceMax.value = priceSlider.noUiSlider.get()[1];
+    priceMin.value = priceSlider.noUiSlider.get()[sliderParameters.minHandIndex];
+    priceMax.value = priceSlider.noUiSlider.get()[sliderParameters.maxHandIndex];
   });
 };
 
@@ -56,8 +66,8 @@ const setPriceMaxSliderValue = () => {
 /* сброс значений слайдера цены при сбросе формы */
 const resetSliderValues = () => {
   buttonReset.addEventListener('click', () => {
-    setSliderMinValue(0);
-    setSliderMaxValue(900);
+    setSliderMinValue(sliderParameters.minHandStart);
+    setSliderMaxValue(sliderParameters.maxHandStart);
   });
 };
 
