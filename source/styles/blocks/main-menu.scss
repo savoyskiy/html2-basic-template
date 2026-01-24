@@ -33,13 +33,13 @@
 
 .main-menu__link {
   display: block;
-  max-width: 280px;
   padding: 20px;
   text-align: center;
   color: $base-black;
   text-decoration: none;
   border-bottom: 1px solid $base-secondary;
   background-color: inherit;
+  word-break: break-all;
 
   &:active {
     background-color: $base-secondary;

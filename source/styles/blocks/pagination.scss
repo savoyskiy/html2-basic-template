@@ -113,6 +113,10 @@
   &--hidden {
     background-color: $lightest-gray;
     pointer-events: none;
+
+    &::before {
+      background-color: $lightest-gray;
+    }
   }
 
   &--hidden .pagination__text {
