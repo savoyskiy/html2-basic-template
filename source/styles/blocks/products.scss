@@ -1,3 +1,8 @@
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
 .products__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,5 +20,11 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 0 61px;
+  }
+}
+
+.products__pagination {
+  @media (min-width: $tablet-width) {
+    align-self: end;
   }
 }
