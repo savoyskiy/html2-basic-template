@@ -12,13 +12,13 @@ onButtonPreviousClick();
 onButtonNextClick();
 onSliderPaginationClick();
 
-/* слайдер цены */
+/* Слайдер цены */
 setPriceInputsValues();
 setPriceMinSliderValue();
 setPriceMaxSliderValue();
 resetSliderValues();
 
-/* пагинация в каталоге */
+/* Пагинация в каталоге */
 /* реализовано только переключение ссылок и их стилей */
 onNextButtonClick();
 onPreviousButtonClick();
