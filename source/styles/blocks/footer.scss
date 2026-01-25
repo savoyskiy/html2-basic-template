@@ -20,6 +20,7 @@
 
 .footer__logotypes {
   display: flex;
+  min-height: 40px;
   padding: 20px;
   border-bottom: 1px solid $base-secondary;
 
@@ -33,6 +34,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     flex-direction: column;
+    min-height: 182px;
     padding: 0;
   }
 }
@@ -42,6 +44,7 @@
   padding: 2px 0;
 
   @media (min-width: $desktop-width) {
+    min-height: 66px;
     margin: 0 0 50px;
     padding: 0;
   }
@@ -91,6 +94,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    min-height: 172px;
   }
 
   @media (min-width: $desktop-width) {

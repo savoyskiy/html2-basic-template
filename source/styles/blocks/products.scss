@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.products__list-wrapper {
+  @media (min-width: $desktop-width) {
+    min-height: 950px;
+  }
+}
+
 .products__list {
   display: grid;
   grid-template-columns: 1fr;

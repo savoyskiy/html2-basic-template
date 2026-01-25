@@ -2,6 +2,15 @@
   position: relative;
   display: flex;
   justify-content: center;
+  min-height: 656px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+  }
 }
 
 .slider__list {
