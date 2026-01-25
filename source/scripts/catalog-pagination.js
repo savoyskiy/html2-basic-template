@@ -1,7 +1,7 @@
 /* пагинация в каталоге */
 const previousButton = document.querySelector('.pagination__link--previous');
 const nextButton = document.querySelector('.pagination__link--next');
-const linkList = document.querySelectorAll('a.pagination__link');
+const linkList = document.querySelectorAll('a.pagination__number');
 const pagination = document.querySelector('.pagination');
 
 let current = 1; /* начальное значение установлено 1 для отображения как в макете */
@@ -44,8 +44,7 @@ linkList.forEach((element, index) => {
 
 const onlinkListClick = () => {
   pagination.addEventListener('click', (evt) => {
-    if (evt.target.tagName === 'A') {
-      evt.preventDefault();
+    if (evt.target.classList.contains('pagination__number')) {
       current = +evt.target.dataset.id;
       changePagination();
     }

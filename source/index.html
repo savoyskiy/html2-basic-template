@@ -192,7 +192,7 @@
 
     <section class="catalog">
       <div class="catalog__content-wrapper container">
-        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <h2 class="catalog__title" id="catalog">Каталог кофейных напитков</h2>
         <p class="catalog__badge">Каталог</p>
 
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
@@ -380,27 +380,27 @@
 
           <ul class="products__pagination pagination">
             <li class="pagination__item">
-              <button class="pagination__link pagination__link--edge pagination__link--previous" type="button">
+              <a class="pagination__link pagination__link--edge pagination__link--previous" href="#catalog">
                 <span class="pagination__text">Назад</span>
-              </button>
+              </a>
             </li>
 
             <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
+              <a class="pagination__link pagination__number" href="#catalog">1</a>
             </li>
 
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--current" href="#">2</a>
+              <a class="pagination__link pagination__number pagination__link--current" href="#catalog">2</a>
             </li>
 
             <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
+              <a class="pagination__link pagination__number" href="#catalog">3</a>
             </li>
 
             <li class="pagination__item">
-              <button class="pagination__link pagination__link--edge pagination__link--next" type="button">
+              <a class="pagination__link pagination__link--edge pagination__link--next" href="#catalog">
                 <span class="pagination__text">Вперёд</span>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
