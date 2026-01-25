@@ -1,4 +1,5 @@
 /* пагинация в каталоге */
+/* реализовано только переключение ссылок и их стилей */
 const previousButton = document.querySelector('.pagination__link--previous');
 const nextButton = document.querySelector('.pagination__link--next');
 const linkList = document.querySelectorAll('a.pagination__number');
