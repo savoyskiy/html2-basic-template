@@ -1,0 +1,15 @@
+.page-404 {
+  background-color: $lightest-gray;
+}
+
+.page-404__message {
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+}

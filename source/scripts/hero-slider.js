@@ -2,10 +2,14 @@
 const buttonPrevious = document.querySelector('.slider__button--previous');
 const buttonNext = document.querySelector('.slider__button--next');
 const sliderPagination = document.querySelector('.slider-pagination');
-const paginationButtons = document.querySelectorAll('.slider-pagination__button');
 const sliderItems = document.querySelectorAll('.slider__item');
+let paginationButtons = document.querySelectorAll('.slider-pagination__button');
 
 let current = 0;
+
+if (sliderItems.length < 2) {
+  buttonNext.disabled = true;
+}
 
 const changeSliderControls = () => {
   if (current <= 0) {
@@ -44,17 +48,32 @@ const onButtonNextClick = () => {
   });
 };
 
+/* добавление нужного количества кнопок пагинации слайдера */
+if (paginationButtons.length < sliderItems.length) {
+  for (let i = paginationButtons.length; i < sliderItems.length; i++) {
+    const newPaginationItem = document.querySelector('.slider-pagination__item').cloneNode(true);
+    const newPaginationItemButton = newPaginationItem.querySelector('button');
+    newPaginationItemButton.classList.remove('slider-pagination__button--current');
+    const newPaginationItemButtonText = newPaginationItemButton.querySelector('span');
+    newPaginationItemButtonText.textContent = i + 1;
+    sliderPagination.append(newPaginationItem);
+  }
+}
+
+paginationButtons = document.querySelectorAll('.slider-pagination__button');
 paginationButtons.forEach((element, index) => {
   element.dataset.id = index;
 });
 
 const onSliderPaginationClick = () => {
-  sliderPagination.addEventListener('click', (evt) => {
-    if (evt.target.type === 'button') {
-      current = +evt.target.dataset.id;
-      changeSliderControls();
-    }
-  });
+  if (sliderItems.length >= 2) {
+    sliderPagination.addEventListener('click', (evt) => {
+      if (evt.target.type === 'button') {
+        current = +evt.target.dataset.id;
+        changeSliderControls();
+      }
+    });
+  }
 };
 
 export { onButtonPreviousClick, onButtonNextClick, onSliderPaginationClick };

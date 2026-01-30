@@ -1,0 +1,40 @@
+.modal {
+  border: none;
+  border-radius: 4px;
+  filter: drop-shadow(0 5px 15px $card-shadow);
+
+  &[open]::backdrop {
+    background-color: $primary-opacity;
+  }
+}
+
+.modal__wrapper {
+  display: grid;
+  place-items: center;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 384px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 720px;
+  }
+}
+
+.modal__button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: none;
+  color: $base-white;
+  background-color: $base-primary;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}
