@@ -70,17 +70,16 @@
   }
 
   &:hover {
-    color: $base-primary;
+    color: $primary-lighter;
   }
 
   &:focus-visible {
-    color: $base-primary;
+    color: $primary-lighter;
     outline: 2px solid $base-primary;
   }
 
   &:active {
-    color: $base-primary;
-    background-color: $base-secondary;
+    color: $primary-darker;
   }
 }
 
